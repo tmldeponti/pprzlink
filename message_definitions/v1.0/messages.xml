@@ -1612,7 +1612,10 @@
       <field name="delay_ns" type="uint32"/>
     </message>
 
-    <!-- 181 is free -->
+    <message name="ROT_WING" id="181">
+      <field name="wing_angle" type="uint8"/>
+    </message>
+
     <!-- 182 is free -->
     <!-- 183 is free -->
     <!-- 184 is free -->
