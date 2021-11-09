@@ -1614,6 +1614,8 @@
 
     <message name="ROT_WING" id="181">
       <field name="wing_angle" type="uint8"/>
+      <field name="g1_p_side" type="float[]"/>
+      <field name="g1_q_side" type="float[]"/>
     </message>
 
     <!-- 182 is free -->
