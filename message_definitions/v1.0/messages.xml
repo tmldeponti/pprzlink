@@ -1612,13 +1612,19 @@
       <field name="delay_ns" type="uint32"/>
     </message>
 
-    <message name="ROT_WING" id="181">
-      <field name="wing_angle" type="uint8"/>
+    <message name="ROT_WING_EFF" id="181">
       <field name="g1_p_side" type="float[]"/>
       <field name="g1_q_side" type="float[]"/>
     </message>
 
-    <!-- 182 is free -->
+    <message name="ROT_WING_CONTROLLER" id="182">
+      <field name="wing_angle_deg"      type="float"/>
+      <field name="wing_angle_deg_sp"   type="float"/>
+      <field name="ADC_position"        type="uint16"/>
+      <field name="ADC_servo"           type="uint16"/>
+      <field name="pprz_cmd"            type="int32"/>
+    </message>
+
     <!-- 183 is free -->
     <!-- 184 is free -->
     <!-- 185 is free -->
