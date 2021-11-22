@@ -1629,6 +1629,7 @@
       <field name="angular_accel_p" type="float"/>
       <field name="angular_accel_q" type="float"/>
       <field name="angular_accel_r" type="float"/>
+      <field name="body_accel_z"    type="float"/>
       <field name="angular_accel_p_f" type="float"/>
       <field name="angular_accel_q_f" type="float"/>
       <field name="angular_accel_r_f" type="float"/>
