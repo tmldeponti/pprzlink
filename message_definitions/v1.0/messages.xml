@@ -1633,7 +1633,7 @@
       <field name="angular_accel_ref_p" type="float"/>
       <field name="angular_accel_ref_q" type="float"/>
       <field name="angular_accel_ref_r" type="float"/>
-      <field name="u" type="int32[]"/>
+      <field name="u" type="int16[]"/>
     </message>
     <!-- 184 is free -->
     <!-- 185 is free -->
