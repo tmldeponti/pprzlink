@@ -1613,8 +1613,9 @@
     </message>
 
     <message name="ROT_WING_EFF" id="181">
-      <field name="g1_p_side" type="float[]"/>
-      <field name="g1_q_side" type="float[]"/>
+      <field name="G1_roll_init" type="float[]" unit="none"/>
+      <field name="G1_pitch_init" type="float[]" unit="none"/>
+      <field name="G1_yaw_init" type="float[]" unit="none"/>
     </message>
 
     <message name="ROT_WING_CONTROLLER" id="182">
@@ -1633,8 +1634,8 @@
       <field name="angular_accel_ref_p" type="float"/>
       <field name="angular_accel_ref_q" type="float"/>
       <field name="angular_accel_ref_r" type="float"/>
-      <field name="u" type="int16[]"/>
       <field name="airspeed" type="float"/>
+      <field name="u" type="int16[]"/>
     </message>
     <!-- 184 is free -->
     <!-- 185 is free -->
