@@ -1638,7 +1638,13 @@
       <field name="airspeed" type="float"/>
       <field name="u" type="int16[]"/>
     </message>
-    <!-- 184 is free -->
+
+    <message name="DOUBLET" id="184">
+      <field name="doublet_active" type="uint8"/>
+      <field name="percentage_done" type="float"/>
+      <field name="doublet_axis" type="uint8"/>
+      <field name="doublet_amplitude" type="int16" />
+    </message>
     <!-- 185 is free -->
     <!-- 186 is free -->
     <!-- 187 is free -->
