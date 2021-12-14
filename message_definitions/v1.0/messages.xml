@@ -384,7 +384,7 @@
       <field name="percentage_done"     type="float">Percentage done</field>
       <field name="current_frequency"   type="float">Current frequency</field>
       <field name="axis"          type="uint8">Current chirp axis</field>
-      <field name="amplitude"           type="int16">Amplitude</field>
+      <field name="amplitude"           type="float">Amplitude</field>
       <field name="fstart"              type="float">Start frequency</field>
       <field name="fstop"               type="float">Stop frequency</field>
       <field name="noise_onaxis_ratio"  type="float">Noise ratio onaxis</field>
