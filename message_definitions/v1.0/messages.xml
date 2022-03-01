@@ -381,6 +381,7 @@
 
     <message name="CHIRP" id="45">
       <field name="active"        type="uint8">Chirp is active</field>
+      <field name="current_value" type="float">Chirp value</field>
       <field name="percentage_done"     type="float">Percentage done</field>
       <field name="current_frequency"   type="float">Current frequency</field>
       <field name="axis"          type="uint8">Current chirp axis</field>
@@ -1647,7 +1648,34 @@
       <field name="doublet_axis" type="uint8"/>
       <field name="doublet_amplitude" type="int16" />
     </message>
-    <!-- 185 is free -->
+
+    <message name="EFF_FULL_INDI" id="185">
+      <field name="angular_rate_p" type="float"/>
+      <field name="angular_rate_q" type="float"/>
+      <field name="angular_rate_r" type="float"/>
+      <field name="body_accel_x"    type="float"/>
+      <field name="body_accel_y"    type="float"/>
+      <field name="body_accel_z"    type="float"/>
+      <field name="airspeed" type="float"/>
+      <field name="doublet_active" type="uint8"/>
+      <field name="current_doublet_values" type="int16[]"/>
+      <field name="doublet_axis" type="uint8"/>
+      <field name="doublet_amplitude" type="int16" />
+      <field name="chirp_active"        type="uint8"/>
+      <field name="chirp_axis"          type="uint8"/>
+      <field name="chirp_amplitude"           type="float"/>
+      <field name="chirp_fstart"              type="float"/>
+      <field name="chirp_fstop"               type="float"/>
+      <field name="current_chirp_values" type="float[]"/>
+      <field name="wing_angle_deg"      type="float"/>
+      <field name="wing_angle_deg_sp"   type="float"/>
+      <field name="phi"      type="int32" alt_unit="deg" alt_unit_coef="0.0139882"/>
+      <field name="theta"    type="int32" alt_unit="deg" alt_unit_coef="0.0139882"/>
+      <field name="psi"      type="int32" alt_unit="deg" alt_unit_coef="0.0139882"/>
+      <field name="actuator_thrust_bx_pprz"               type="float"/>
+      <field name="u" type="int16[]"/>
+    </message>
+
     <!-- 186 is free -->
     <!-- 187 is free -->
     <!-- 188 is free -->
