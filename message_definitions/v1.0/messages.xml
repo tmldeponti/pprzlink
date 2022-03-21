@@ -1661,6 +1661,7 @@
       <field name="current_doublet_values" type="int16[]"/>
       <field name="doublet_axis" type="uint8"/>
       <field name="doublet_amplitude" type="int16" />
+      <field name="doublet_number" type="int16" />
       <field name="chirp_active"        type="uint8"/>
       <field name="chirp_axis"          type="uint8"/>
       <field name="chirp_amplitude"           type="float"/>
