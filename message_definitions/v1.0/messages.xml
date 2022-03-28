@@ -1668,6 +1668,7 @@
       <field name="chirp_active"        type="uint8"/>
       <field name="chirp_axis"          type="uint8"/>
       <field name="chirp_amplitude"           type="float"/>
+      <field name="chirp_number" type="int16" />
       <field name="chirp_fstart"              type="float"/>
       <field name="chirp_fstop"               type="float"/>
       <field name="current_chirp_values" type="float[]"/>
