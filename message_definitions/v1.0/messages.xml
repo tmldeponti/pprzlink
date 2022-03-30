@@ -1650,6 +1650,18 @@
     </message>
 
     <message name="EFF_FULL_INDI" id="185">
+      <field name="position_N" type="float"/>
+      <field name="position_E" type="float"/>
+      <field name="position_D" type="float"/>
+      <field name="position_N_ref" type="float"/>
+      <field name="position_E_ref" type="float"/>
+      <field name="position_D_ref" type="float"/>
+      <field name="speed_N" type="float"/>
+      <field name="speed_E" type="float"/>
+      <field name="speed_D" type="float"/>
+      <field name="speed_N_ref" type="float"/>
+      <field name="speed_E_ref" type="float"/>
+      <field name="speed_D_ref" type="float"/>
       <field name="angular_rate_p" type="float"/>
       <field name="angular_rate_q" type="float"/>
       <field name="angular_rate_r" type="float"/>
@@ -1677,7 +1689,10 @@
       <field name="phi"      type="int32" alt_unit="deg" alt_unit_coef="0.0139882"/>
       <field name="theta"    type="int32" alt_unit="deg" alt_unit_coef="0.0139882"/>
       <field name="psi"      type="int32" alt_unit="deg" alt_unit_coef="0.0139882"/>
-      <field name="actuator_thrust_bx_pprz"               type="float"/>
+      <field name="phi_ref"      type="float" alt_unit="deg" alt_unit_coef="57.2958"/>
+      <field name="theta_ref"    type="float" alt_unit="deg" alt_unit_coef="57.2958"/>
+      <field name="psi_ref"      type="float" alt_unit="deg" alt_unit_coef="57.2958"/>
+      <field name="actuator_thrust_bx_pprz" type="float"/>
       <field name="u" type="int16[]"/>
     </message>
 
