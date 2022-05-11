@@ -1700,7 +1700,21 @@
       <field name="u" type="int16[]"/>
     </message>
 
-    <!-- 186 is free -->
+<message name="WINDTUNNEL_STATIC" id="186">
+      <field name="test_active"         type="uint8" unit="bool"/>
+      <field name="airspeed"            type="float"/>
+      <field name="wing_angle_deg"      type="float"/>
+      <field name="wing_angle_deg_sp"   type="float"/>
+      <field name="theta"               type="int32" alt_unit="deg" alt_unit_coef="0.0139882"/>
+      <field name="wind_counter"        type="int8"/>
+      <field name="wing_counter"        type="int8"/>
+      <field name="mot_status_counter"  type="int8"/>
+      <field name="as_counter"          type="int8"/>
+      <field name="excitation_counter"  type="int8"/>
+      <field name="test_point_counter"  type="int32"/>
+      <field name="u"                   type="int16[]"/>
+    </message>
+
     <!-- 187 is free -->
     <!-- 188 is free -->
     <!-- 189 is free -->
