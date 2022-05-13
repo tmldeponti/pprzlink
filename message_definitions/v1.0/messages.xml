@@ -1712,6 +1712,9 @@
       <field name="as_counter"          type="int8"/>
       <field name="excitation_counter"  type="int8"/>
       <field name="test_point_counter"  type="int32"/>
+      <field name="skew_rates_counter"  type="int8"/>
+      <field name="skew_test_counter"   type="int8"/>
+      <field name="max_rot_rate"        type="float"/>
       <field name="u"                   type="int16[]"/>
     </message>
 
