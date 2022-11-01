@@ -1229,7 +1229,12 @@
       <field name="airspeed" type="float" unit="m/s"/>
     </message>
 
-    <!-- 139 is free -->
+     <message name="ROT_WING_CONTROLLER" id="139">
+      <field name="wing_angle_deg"      type="float"/>
+      <field name="wing_angle_deg_sp"   type="float"/>
+      <field name="ADC_position"        type="uint16"/>
+      <field name="pprz_cmd"            type="int32"/>
+    </message>
 
     <message name="STAB_ATTITUDE_INT" id="140">
       <field name="est_p"         type="int32" alt_unit="deg/s" alt_unit_coef="0.0139882"/>
@@ -1670,7 +1675,19 @@
       <field name="delay_ns" type="uint32"/>
     </message>
 
-    <!-- 181 is free -->
+    <message name="STAB_ATTITUDE_FULL_INDI" id="181">
+      <field name="angular_rate_p" type="float" unit="rad/s" alt_unit="deg/s" alt_unit_coef="57.29578"/>
+      <field name="angular_rate_q" type="float" unit="rad/s" alt_unit="deg/s" alt_unit_coef="57.29578"/>
+      <field name="angular_rate_r" type="float" unit="rad/s" alt_unit="deg/s" alt_unit_coef="57.29578"/>
+      <field name="body_accel_x" type="float" unit="m/s2"/>
+      <field name="body_accel_y" type="float" unit="m/s2"/>
+      <field name="body_accel_z" type="float" unit="m/s2"/>
+      <field name="angular_accel_ref_p" type="float" unit="rad/s" alt_unit="deg/s" alt_unit_coef="57.29578"/>
+      <field name="angular_accel_ref_q" type="float" unit="rad/s" alt_unit="deg/s" alt_unit_coef="57.29578"/>
+      <field name="angular_accel_ref_r" type="float" unit="rad/s" alt_unit="deg/s" alt_unit_coef="57.29578"/>
+      <field name="airspeed" type="float" unit="m/s"/>
+      <field name="u" type="float[]"/>
+    </message>
     <!-- 182 is free -->
     <!-- 183 is free -->
     <!-- 184 is free -->
@@ -2123,6 +2140,7 @@
       <field name="rpm"         type="float" unit="rpm">Motor rotation speed</field>
       <field name="motor_volts" type="float" unit="V">Motor voltage</field>
       <field name="energy"      type="float" unit="Wh">Accumulated consumed energy</field>
+      <field name="temperature" type="float" unit="K">Temperature</field>
       <field name="motor_id"    type="uint8">Motor ID</field>
     </message>
 
