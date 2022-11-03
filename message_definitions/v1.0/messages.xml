@@ -1688,11 +1688,80 @@
       <field name="airspeed" type="float" unit="m/s"/>
       <field name="u" type="float[]"/>
     </message>
+
     <!-- 182 is free -->
     <!-- 183 is free -->
     <!-- 184 is free -->
-    <!-- 185 is free -->
-    <!-- 186 is free -->
+
+    <message name="EFF_FULL_INDI" id="185">
+      <field name="position_N" type="float"/>
+      <field name="position_E" type="float"/>
+      <field name="position_D" type="float"/>
+      <field name="position_N_ref" type="float"/>
+      <field name="position_E_ref" type="float"/>
+      <field name="position_D_ref" type="float"/>
+      <field name="speed_N" type="float"/>
+      <field name="speed_E" type="float"/>
+      <field name="speed_D" type="float"/>
+      <field name="speed_N_ref" type="float"/>
+      <field name="speed_E_ref" type="float"/>
+      <field name="speed_D_ref" type="float"/>
+      <field name="angular_rate_p" type="float"/>
+      <field name="angular_rate_q" type="float"/>
+      <field name="angular_rate_r" type="float"/>
+      <field name="angular_acc_p_ref" type="float"/>
+      <field name="angular_acc_q_ref" type="float"/>
+      <field name="angular_acc_r_ref" type="float"/>
+      <field name="body_accel_x"    type="float"/>
+      <field name="body_accel_y"    type="float"/>
+      <field name="body_accel_z"    type="float"/>
+      <field name="body_accel_x_ref"    type="float"/>
+      <field name="body_accel_y_ref"    type="float"/>
+      <field name="body_accel_z_ref"    type="float"/>
+      <field name="airspeed" type="float"/>
+      <field name="doublet_active" type="uint8"/>
+      <field name="current_doublet_values" type="int16[]"/>
+      <field name="doublet_axis" type="uint8"/>
+      <field name="doublet_amplitude" type="int16" />
+      <field name="doublet_number" type="int16" />
+      <field name="chirp_active"        type="uint8"/>
+      <field name="chirp_axis"          type="uint8"/>
+      <field name="chirp_amplitude"           type="float"/>
+      <field name="chirp_number" type="int16" />
+      <field name="chirp_fstart"              type="float"/>
+      <field name="chirp_fstop"               type="float"/>
+      <field name="current_chirp_values" type="float[]"/>
+      <field name="wing_angle_deg"      type="float"/>
+      <field name="wing_angle_deg_sp"   type="float"/>
+      <field name="phi"      type="int32" alt_unit="deg" alt_unit_coef="0.0139882"/>
+      <field name="theta"    type="int32" alt_unit="deg" alt_unit_coef="0.0139882"/>
+      <field name="psi"      type="int32" alt_unit="deg" alt_unit_coef="0.0139882"/>
+      <field name="phi_ref"      type="float" alt_unit="deg" alt_unit_coef="57.2958"/>
+      <field name="theta_ref"    type="float" alt_unit="deg" alt_unit_coef="57.2958"/>
+      <field name="psi_ref"      type="float" alt_unit="deg" alt_unit_coef="57.2958"/>
+      <field name="theta_pref" type="float"/>
+      <field name="actuator_thrust_bx_pprz" type="float"/>
+      <field name="u" type="int16[]"/>
+    </message>
+
+<message name="WINDTUNNEL_STATIC" id="186">
+      <field name="test_active"         type="uint8" unit="bool"/>
+      <field name="airspeed"            type="float"/>
+      <field name="wing_angle_deg"      type="float"/>
+      <field name="wing_angle_deg_sp"   type="float"/>
+      <field name="theta"               type="int32" alt_unit="deg" alt_unit_coef="0.0139882"/>
+      <field name="wind_counter"        type="int8"/>
+      <field name="wing_counter"        type="int8"/>
+      <field name="mot_status_counter"  type="int8"/>
+      <field name="as_counter"          type="int8"/>
+      <field name="excitation_counter"  type="int8"/>
+      <field name="test_point_counter"  type="int32"/>
+      <field name="skew_rates_counter"  type="int8"/>
+      <field name="skew_test_counter"   type="int8"/>
+      <field name="max_rot_rate"        type="float"/>
+      <field name="u"                   type="int16[]"/>
+    </message>
+
     <!-- 187 is free -->
     <!-- 188 is free -->
     <!-- 189 is free -->
