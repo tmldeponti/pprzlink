@@ -1761,6 +1761,7 @@
       <field name="skew_test_counter"   type="int8"/>
       <field name="max_rot_rate"        type="float"/>
       <field name="u"                   type="int16[]"/>
+      <field name="u_pwm"               type="int16[]"/>
     </message>
 
     <!-- 187 is free -->
