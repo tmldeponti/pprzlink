@@ -1760,6 +1760,7 @@
       <field name="skew_rates_counter"  type="int8"/>
       <field name="skew_test_counter"   type="int8"/>
       <field name="max_rot_rate"        type="float"/>
+      <field name="test_compl"          type="float"/>
       <field name="u"                   type="int16[]"/>
       <field name="u_pwm"               type="int16[]"/>
     </message>
