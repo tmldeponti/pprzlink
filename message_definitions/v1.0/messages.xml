@@ -1708,17 +1708,19 @@
       <field name="p_dot"           type="float" unit="rad/s^2" alt_unit="deg/s^2" alt_unit_coef="57.29578"/>
       <field name="q_dot"           type="float" unit="rad/s^2" alt_unit="deg/s^2" alt_unit_coef="57.29578"/>
       <field name="r_dot"           type="float" unit="rad/s^2" alt_unit="deg/s^2" alt_unit_coef="57.29578"/>
+      <field name="nu"              type="float[]" unit="none"/>
+      <field name="u"               type="float[]" unit="none"/>
+    </message>
+    
+    <message name="ONELOOP_G" id="183">
       <field name="G1_aN"           type="float[]" unit="none"/>
       <field name="G1_aE"           type="float[]" unit="none"/>
       <field name="G1_aZ"           type="float[]" unit="none"/>
       <field name="G1_roll"         type="float[]" unit="none"/>
       <field name="G1_pitch"        type="float[]" unit="none"/>
       <field name="G1_yaw"          type="float[]" unit="none"/>
-      <field name="nu"              type="float[]" unit="none"/>
-      <field name="u"               type="float[]" unit="none"/>
     </message>
     
-    <!-- 183 is free -->
     <!-- 184 is free -->
 
     <message name="EFF_FULL_INDI" id="185">
