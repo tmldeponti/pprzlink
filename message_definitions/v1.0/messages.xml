@@ -1721,7 +1721,7 @@
       <field name="G1_yaw"          type="float[]" unit="none"/>
     </message>
     
-    <message name="ONELOOP_ANDI" id="182">
+    <message name="ONELOOP_GUIDANCE" id="184">
       <field name="pos_N_ref"       type="float" unit="m"    />
       <field name="pos_E_ref"       type="float" unit="m"    /> 
       <field name="pos_D_ref"       type="float" unit="m"    /> 
