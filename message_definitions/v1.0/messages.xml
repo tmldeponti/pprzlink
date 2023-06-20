@@ -1740,8 +1740,7 @@
       <field name="acc_N"           type="float" unit="m/s^2"/>
       <field name="acc_E"           type="float" unit="m/s^2"/>
       <field name="acc_D"           type="float" unit="m/s^2"/>
-
-    </message>-
+    </message>
 
     <message name="EFF_FULL_INDI" id="185">
       <field name="position_N" type="float"/>
