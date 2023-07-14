@@ -1740,6 +1740,9 @@
       <field name="acc_N"           type="float" unit="m/s^2"/>
       <field name="acc_E"           type="float" unit="m/s^2"/>
       <field name="acc_D"           type="float" unit="m/s^2"/>
+      <field name="jerk_N"          type="float" unit="m/s^3"/>
+      <field name="jerk_E"          type="float" unit="m/s^3"/>
+      <field name="jerk_D"          type="float" unit="m/s^3"/>
     </message>
 
     <message name="EFF_FULL_INDI" id="185">
