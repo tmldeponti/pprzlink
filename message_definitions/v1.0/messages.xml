@@ -878,7 +878,21 @@
       <field name="mode" type="uint8"/>
     </message>
 
-    <!-- 95 is free -->
+   <message name="TARGET_POS_INFO" id="95">
+      <description>
+        Global position, speed and ID of a target for functions like 'Follow Me'
+      </description>
+      <field name="lat" type="int32" unit="1e7deg" alt_unit="deg" alt_unit_coef="0.0000001"/>
+      <field name="lon" type="int32" unit="1e7deg" alt_unit="deg" alt_unit_coef="0.0000001"/>
+      <field name="alt" type="int32" unit="mm" alt_unit="m">Height above Mean Sea Level (geoid)</field>
+      <field name="speed" type="float" unit="m/s">Ground speed</field>
+      <field name="climb" type="float" unit="m/s">Climb speed</field>
+      <field name="course" type="float" unit="deg" format="%.1f"/>
+      <field name="heading" type="float" unit="deg" format="%.1f"/>
+      <field name="off_heading" type="float" unit="deg">Offset heading</field>
+      <field name="off_distance" type="float" unit="m">Offset distance</field>
+      <field name="off_height" type="float" unit="m">Offset height</field>
+    </message>
 
     <message name="HIH_STATUS" id="96">
       <field name="humid" type="uint16"/>
@@ -1225,15 +1239,20 @@
 
     <message name="AIRSPEED_MS45XX" id="138">
       <field name="diffPress" type="float" unit="Pa"/>
+      <field name="diffPress_raw" type="float" unit="Pa"/>
       <field name="temperature" type="int16" unit="0.1 deg_celcius" alt_unit="deg_celcius" alt_unit_coef="0.1"/>
       <field name="airspeed" type="float" unit="m/s"/>
+      <field name="airspeed_raw" type="float" unit="m/s"/>
     </message>
 
-     <message name="ROT_WING_CONTROLLER" id="139">
-      <field name="wing_angle_deg"      type="float"/>
-      <field name="wing_angle_deg_sp"   type="float"/>
-      <field name="ADC_position"        type="uint16"/>
-      <field name="pprz_cmd"            type="int32"/>
+    <message name="APPROACH_MOVING_TARGET" id="139">
+      <field name="ref_pos_x" type="float" unit="m"/>
+      <field name="ref_pos_y" type="float" unit="m"/>
+      <field name="ref_pos_z" type="float" unit="m"/>
+      <field name="ref_vel_x" type="float" unit="m/s"/>
+      <field name="ref_vel_y" type="float" unit="m/s"/>
+      <field name="ref_vel_z" type="float" unit="m/s"/>
+      <field name="distance" type="float" unit="m"/>
     </message>
 
     <message name="STAB_ATTITUDE_INT" id="140">
@@ -1468,7 +1487,15 @@
       <field name="comp_id" type="uint8" values="NONE|GENERIC|IR|ICQ|ICE|FC|DCM|FINV|MLKF|GX3|CHIMU|VN"/>
     </message>
 
-    <!-- 158 is free -->
+    <message name="APPROACH_MOVING_TARGET" id="158">
+      <field name="ref_pos_x" type="float" unit="m"/>
+      <field name="ref_pos_y" type="float" unit="m"/>
+      <field name="ref_pos_z" type="float" unit="m"/>
+      <field name="ref_vel_x" type="float" unit="m/s"/>
+      <field name="ref_vel_y" type="float" unit="m/s"/>
+      <field name="ref_vel_z" type="float" unit="m/s"/>
+      <field name="distance" type="float" unit="m"/>
+    </message>
 
     <message name="ROTORCRAFT_NAV_STATUS" id="159">
       <field name="block_time" type="uint16" unit="s"/>
@@ -1612,7 +1639,22 @@
       <field name="mag_y" type="float" unit="mGauss">Magnetometer y-bias in mGauss</field>
       <field name="mag_z" type="float" unit="mGauss">Magnetometer z-bias in mGauss</field>
     </message>
-    <!-- 172 is free -->
+    
+    <message name="TARGET_POS_INFO" id="172">
+      <description>
+        Global position, speed and ID of a target for functions like 'Follow Me'
+      </description>
+      <field name="lat" type="int32" unit="1e7deg" alt_unit="deg" alt_unit_coef="0.0000001"/>
+      <field name="lon" type="int32" unit="1e7deg" alt_unit="deg" alt_unit_coef="0.0000001"/>
+      <field name="alt" type="int32" unit="mm" alt_unit="m">Height above Mean Sea Level (geoid)</field>
+      <field name="speed" type="float" unit="m/s">Ground speed</field>
+      <field name="climb" type="float" unit="m/s">Climb speed</field>
+      <field name="course" type="float" unit="deg" format="%.1f"/>
+      <field name="heading" type="float" unit="deg" format="%.1f"/>
+      <field name="off_heading" type="float" unit="deg">Offset heading</field>
+      <field name="off_distance" type="float" unit="m">Offset distance</field>
+      <field name="off_height" type="float" unit="m">Offset height</field>
+    </message>
 
     <message name="AHRS_EULER" id="173">
       <field name="phi"   type="float" unit="rad" alt_unit="deg" alt_unit_coef="57.29578" />
@@ -1676,6 +1718,9 @@
     </message>
 
     <message name="STAB_ATTITUDE_FULL_INDI" id="181">
+      <field name="angular_rate_ref_p" type="float" unit="rad/s" alt_unit="deg/s" alt_unit_coef="57.29578"/>
+      <field name="angular_rate_ref_q" type="float" unit="rad/s" alt_unit="deg/s" alt_unit_coef="57.29578"/>
+      <field name="angular_rate_ref_r" type="float" unit="rad/s" alt_unit="deg/s" alt_unit_coef="57.29578"/>
       <field name="angular_rate_p" type="float" unit="rad/s" alt_unit="deg/s" alt_unit_coef="57.29578"/>
       <field name="angular_rate_q" type="float" unit="rad/s" alt_unit="deg/s" alt_unit_coef="57.29578"/>
       <field name="angular_rate_r" type="float" unit="rad/s" alt_unit="deg/s" alt_unit_coef="57.29578"/>
@@ -1819,10 +1864,29 @@
       <field name="u_pwm"               type="int16[]"/>
     </message>
 
-    <!-- 187 is free -->
-    <!-- 188 is free -->
-    <!-- 189 is free -->
-    <!-- 190 is free -->
+    <message name="ROT_WING_CONTROLLER" id="187">
+      <field name="wing_angle_deg"      type="float"/>
+      <field name="wing_angle_deg_sp"   type="float"/>
+      <field name="ADC_position"        type="uint16"/>
+      <field name="pprz_cmd"            type="int32"/>
+    </message>
+
+    <message name="DOUBLET" id="188">
+      <field name="active"              type="uint8">Doublet is active</field>
+      <field name="axis"                type="uint8">Current doublet axis</field>
+      <field name="amplitude"           type="int16">Amplitude</field>
+      <field name="current_value"       type="int16">Current doublet value</field>
+      <field name="doublet_mode_3211"   type="uint8">Mode 3211 enabled</field>
+    </message>
+    
+    <message name="AIRSPEED_UAVCAN" id="189">
+      <field name="diffPress" type="float" unit="Pa"/>
+      <field name="temperature" type="float"/>
+    </message>
+
+    <message name="THRUST_BX_EFF" id="190">
+      <field name="eff" type="float"/>
+    </message>
     <!-- 191 is free -->
     <!-- 192 is free -->
 
@@ -1845,9 +1909,74 @@
       <field name="mz"    type="float" />
     </message>
 
-    <!-- 194 is free -->
-    <!-- 195 is free -->
-    <!-- 196 is free -->
+    <message name="AIRSPEED_WIND_ESTIMATOR_EKF_FORCES" id="194">
+      <field name="fuselage_x"     type="float" unit="N"/>
+      <field name="fuselage_y"     type="float" unit="N"/>
+      <field name="fuselage_z"     type="float" unit="N"/>
+      <field name="wing_x"     type="float" unit="N"/>
+      <field name="wing_y"     type="float" unit="N"/>
+      <field name="wing_z"     type="float" unit="N"/>
+      <field name="elevator_x"     type="float" unit="N"/>
+      <field name="elevator_y"     type="float" unit="N"/>
+      <field name="elevator_z"     type="float" unit="N"/>
+      <field name="hover_x"     type="float" unit="N"/>
+      <field name="hover_y"     type="float" unit="N"/>
+      <field name="hover_z"     type="float" unit="N"/>
+      <field name="pusher_x"     type="float" unit="N"/>
+      <field name="pusher_y"     type="float" unit="N"/>
+      <field name="pusher_z"     type="float" unit="N"/>
+      <field name="skew"     type="float" unit="rad"/>
+      <field name="elevator_angle"     type="float" unit="rad"/>
+      <field name="pusher_prop"     type="float" unit="RPM"/>
+      <field name="hover_prop"     type="float" unit="RPM"/>
+    </message>
+
+    <message name="AIRSPEED_WIND_ESTIMATOR_EKF_COV" id="195">
+      <field name="Q_accel"     type="float" unit="-"/>
+      <field name="Q_gyro"     type="float" unit="-"/>
+      <field name="Q_mu_x"     type="float" unit="-"/>
+      <field name="Q_mu_y"      type="float" unit="-"/>
+      <field name="Q_mu_z"      type="float" unit="-"/>
+      <field name="Q_k"      type="float" unit="-"/>
+      <field name="R_V_gnd"      type="float" unit="-"/>
+      <field name="R_accel_filt_x"      type="float" unit="-"/>
+      <field name="R_accel_filt_y"      type="float" unit="-"/>
+      <field name="R_accel_filt_z"      type="float" unit="-"/>
+      <field name="R_V_pitot"      type="float" unit="-"/>
+      <field name="P_u"  type="float" unit="-"/>
+      <field name="P_v"  type="float" unit="-"/>
+      <field name="P_w"  type="float" unit="-"/>
+      <field name="P_mu_x"  type="float" unit="-"/>
+      <field name="P_mu_y"  type="float" unit="-"/>
+      <field name="P_mu_z"  type="float" unit="-"/>
+      <field name="P_k_x"  type="float" unit="-"/>
+      <field name="P_k_y"  type="float" unit="-"/>
+      <field name="P_k_z"  type="float" unit="-"/>
+    </message>
+    
+    <message name="AIRSPEED_WIND_ESTIMATOR_EKF" id="196">
+      <field name="u_est"     type="float" unit="m/s"/>
+      <field name="v_est"     type="float" unit="m/s"/>
+      <field name="w_est"     type="float" unit="m/s"/>
+      <field name="mu_N"      type="float" unit="m/s"/>
+      <field name="mu_E"      type="float" unit="m/s"/>
+      <field name="mu_D"      type="float" unit="m/s"/>
+      <field name="offset_x"  type="float" unit="-"/>
+      <field name="offset_y"  type="float" unit="-"/>
+      <field name="offset_z"  type="float" unit="-"/>
+      <field name="healthy"   type="uint8" unit="bool"/>
+      <field name="crashes_n"  type="uint16" unit="-"/>
+      <field name="innov_V_gnd_x"  type="float" unit="-"/>
+      <field name="innov_V_gnd_y"  type="float" unit="-"/>
+      <field name="innov_V_gnd_z"  type="float" unit="-"/>
+      <field name="innov_acc_x"  type="float" unit="-"/>
+      <field name="innov_acc_y"  type="float" unit="-"/>
+      <field name="innov_acc_z"  type="float" unit="-"/>
+      <field name="innov_V_pitot"  type="float" unit="-"/>
+      <field name="debug_1"  type="float" unit="-"/>
+      <field name="debug_2"  type="float" unit="-"/>
+      <field name="debug_3"  type="float" unit="-"/>
+    </message>
 
     <message name="NPS_SENSORS_SCALED" id="197">
       <field name="acc_x"    type="float" />
